@@ -1,4 +1,4 @@
-#Create folder for results
+#Create folder for results...
 if(plotgr==TRUE){
   if(!file.exists("Results")){
     dir.create("./Results/generations",recursive=TRUE)
