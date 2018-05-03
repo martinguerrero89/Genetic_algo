@@ -1,3 +1,14 @@
+#Create folder for results
+if(plotgr==TRUE){
+  if(!file.exists("Results")){
+    dir.create("./Results/generations",recursive=TRUE)
+  }else{
+    if(!file.exists("./Results/generations")){
+      dir.create("./Results/generations",recursive=TRUE)
+    }
+  }
+}
+
 #parallele computing
 cluster <- makeCluster(detectCores() - 1) # convention to leave 1 core for OS
 registerDoParallel(cluster)
